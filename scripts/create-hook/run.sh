@@ -16,7 +16,7 @@ function cancel() {
 
 
 
-SCRIPT_PATH=$( dirname $0 )
+SCRIPT_PATH=$( realpath $( dirname $0 ) )
 RUN_PATH=$( pwd )
 
 NEW_PACKAGE_NAME=$(gum input --placeholder "new package name")
@@ -29,8 +29,15 @@ if ( ! gum confirm "Create new package: $(realpath "./$NEW_PACKAGE_NAME") ?" ); 
 
 mkdir $NEW_PACKAGE_NAME
 
-cp "$SCRIPT_PATH/template/*" "$RUN_PATH/packages/$NEW_PACKAGE_NAME/"
+cp -a "$SCRIPT_PATH/template/." "$RUN_PATH/packages/$NEW_PACKAGE_NAME/"
 
 cd $NEW_PACKAGE_NAME
 
-echo "$( jq --arg package_name "$NEW_PACKAGE_NAME" '.name = $package_name' package.json )" > package.json
+NAMESPACED_PACKAGE_NAME="@hrpn/$NEW_PACKAGE_NAME"
+
+echo "$( jq --arg package_name "$NAMESPACED_PACKAGE_NAME" '.name = $package_name' package.json )" > package.json
+
+gum style \
+	--foreground 212 --border-foreground 57 --border double \
+	--align center --width 50 --padding "1 1" \
+	"✨ Generated package $NAMESPACED_PACKAGE_NAME ✨" '' '' "cd ./packages/$NEW_PACKAGE_NAME && pnpm install"
