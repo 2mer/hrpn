@@ -1,0 +1,17 @@
+{
+	"name": "hrpn",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"create-hook": "bash ./scripts/create-hook/run.sh"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@changesets/cli": "^2.26.2",
+		"turbo": "^1.10.9"
+	}
+}
