@@ -10,14 +10,98 @@ importers:
       '@changesets/cli': 2.26.2
       turbo: 1.10.9
 
-  packages/useStates:
+  packages/use-event-listener:
     specifiers:
+      '@testing-library/react-hooks': ^8.0.1
+      '@types/jest': ^29.5.3
       '@types/react': ^18.2.15
       jest: ^29.6.1
       react: ^18.2.0
       tsup: ^7.1.0
       typescript: ^5.1.6
     devDependencies:
+      '@testing-library/react-hooks': 8.0.1_tznpbkknyqq5lcv5sgrl332jvu
+      '@types/jest': 29.5.3
+      '@types/react': 18.2.15
+      jest: 29.6.1
+      react: 18.2.0
+      tsup: 7.1.0_typescript@5.1.6
+      typescript: 5.1.6
+
+  packages/use-key-state:
+    specifiers:
+      '@hrpn/use-event-listener': workspace:../use-event-listener
+      '@hrpn/use-tracking-ref': link:../use-tracking-ref
+      '@testing-library/react-hooks': ^8.0.1
+      '@types/jest': ^29.5.3
+      '@types/react': ^18.2.15
+      jest: ^29.6.1
+      react: ^18.2.0
+      tsup: ^7.1.0
+      typescript: ^5.1.6
+    devDependencies:
+      '@hrpn/use-event-listener': link:../use-event-listener
+      '@hrpn/use-tracking-ref': link:../use-tracking-ref
+      '@testing-library/react-hooks': 8.0.1_tznpbkknyqq5lcv5sgrl332jvu
+      '@types/jest': 29.5.3
+      '@types/react': 18.2.15
+      jest: 29.6.1
+      react: 18.2.0
+      tsup: 7.1.0_typescript@5.1.6
+      typescript: 5.1.6
+
+  packages/use-selection:
+    specifiers:
+      '@hrpn/use-key-state': link:../use-key-state
+      '@hrpn/use-tracking-ref': link:../use-tracking-ref
+      '@testing-library/react-hooks': ^8.0.1
+      '@types/jest': ^29.5.3
+      '@types/react': ^18.2.15
+      jest: ^29.6.1
+      react: ^18.2.0
+      tsup: ^7.1.0
+      typescript: ^5.1.6
+    devDependencies:
+      '@hrpn/use-key-state': link:../use-key-state
+      '@hrpn/use-tracking-ref': link:../use-tracking-ref
+      '@testing-library/react-hooks': 8.0.1_tznpbkknyqq5lcv5sgrl332jvu
+      '@types/jest': 29.5.3
+      '@types/react': 18.2.15
+      jest: 29.6.1
+      react: 18.2.0
+      tsup: 7.1.0_typescript@5.1.6
+      typescript: 5.1.6
+
+  packages/use-states:
+    specifiers:
+      '@testing-library/react-hooks': ^8.0.1
+      '@types/jest': ^29.5.3
+      '@types/react': ^18.2.15
+      jest: ^29.6.1
+      react: ^18.2.0
+      tsup: ^7.1.0
+      typescript: ^5.1.6
+    devDependencies:
+      '@testing-library/react-hooks': 8.0.1_tznpbkknyqq5lcv5sgrl332jvu
+      '@types/jest': 29.5.3
+      '@types/react': 18.2.15
+      jest: 29.6.1
+      react: 18.2.0
+      tsup: 7.1.0_typescript@5.1.6
+      typescript: 5.1.6
+
+  packages/use-tracking-ref:
+    specifiers:
+      '@testing-library/react-hooks': ^8.0.1
+      '@types/jest': ^29.5.3
+      '@types/react': ^18.2.15
+      jest: ^29.6.1
+      react: ^18.2.0
+      tsup: ^7.1.0
+      typescript: ^5.1.6
+    devDependencies:
+      '@testing-library/react-hooks': 8.0.1_tznpbkknyqq5lcv5sgrl332jvu
+      '@types/jest': 29.5.3
       '@types/react': 18.2.15
       jest: 29.6.1
       react: 18.2.0
@@ -1074,6 +1158,28 @@ packages:
       '@sinonjs/commons': 3.0.0
     dev: true
 
+  /@testing-library/react-hooks/8.0.1_tznpbkknyqq5lcv5sgrl332jvu:
+    resolution: {integrity: sha512-Aqhl2IVmLt8IovEVarNDFuJDVWVvhnr9/GCU6UUnrYXwgDFF9h2L2o2P9KBni1AST5sT6riAyoukFLyjQUgD/g==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      '@types/react': ^16.9.0 || ^17.0.0
+      react: ^16.9.0 || ^17.0.0
+      react-dom: ^16.9.0 || ^17.0.0
+      react-test-renderer: ^16.9.0 || ^17.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      react-dom:
+        optional: true
+      react-test-renderer:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.22.6
+      '@types/react': 18.2.15
+      react: 18.2.0
+      react-error-boundary: 3.1.4_react@18.2.0
+    dev: true
+
   /@types/babel__core/7.20.1:
     resolution: {integrity: sha512-aACu/U/omhdk15O4Nfb+fHgH/z3QsfQzpnvRZhYhThms83ZnAOZz7zZAWO7mn2yyNQaA4xTO8GLK3uqFU4bYYw==}
     dependencies:
@@ -1129,6 +1235,13 @@ packages:
     resolution: {integrity: sha512-c3mAZEuK0lvBp8tmuL74XRKn1+y2dcwOUpH7x4WrF6gk1GIgiluDRgMYQtw2OFcBvAJWlt6ASU3tSqxp0Uu0Aw==}
     dependencies:
       '@types/istanbul-lib-report': 3.0.0
+    dev: true
+
+  /@types/jest/29.5.3:
+    resolution: {integrity: sha512-1Nq7YrO/vJE/FYnqYyw0FS8LdrjExSgIiHyKg7xPpn+yi8Q4huZryKnkJatN1ZRH89Kw2v33/8ZMB7DuZeSLlA==}
+    dependencies:
+      expect: 29.6.1
+      pretty-format: 29.6.1
     dev: true
 
   /@types/minimist/1.2.2:
@@ -3356,6 +3469,16 @@ packages:
   /quick-lru/4.0.1:
     resolution: {integrity: sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==}
     engines: {node: '>=8'}
+    dev: true
+
+  /react-error-boundary/3.1.4_react@18.2.0:
+    resolution: {integrity: sha512-uM9uPzZJTF6wRQORmSrvOIgt4lJ9MC1sNgEOj2XGsDTRE4kmpWxg7ENK9EWNKJRMAOY9z0MuF4yIfl6gp4sotA==}
+    engines: {node: '>=10', npm: '>=6'}
+    peerDependencies:
+      react: '>=16.13.1'
+    dependencies:
+      '@babel/runtime': 7.22.6
+      react: 18.2.0
     dev: true
 
   /react-is/18.2.0:

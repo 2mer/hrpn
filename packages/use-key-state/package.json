@@ -1,5 +1,5 @@
 {
-	"name": "@hrpn/use-states",
+	"name": "@hrpn/use-key-state",
 	"version": "1.0.0",
 	"description": "",
 	"main": "dist/index.js",
@@ -14,6 +14,10 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
+		"@hrpn/use-event-listener": "workspace:../use-event-listener",
+		"@hrpn/use-tracking-ref": "link:../use-tracking-ref",
+		"@testing-library/react-hooks": "^8.0.1",
+		"@types/jest": "^29.5.3",
 		"@types/react": "^18.2.15",
 		"jest": "^29.6.1",
 		"react": "^18.2.0",
@@ -21,6 +25,8 @@
 		"typescript": "^5.1.6"
 	},
 	"peerDependencies": {
+		"@hrpn/use-event-listener": "workspace:../use-event-listener",
+		"@hrpn/use-tracking-ref": "link:../use-tracking-ref",
 		"react": "^18.2.0"
 	}
 }

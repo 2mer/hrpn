@@ -1,5 +1,5 @@
 {
-	"name": "@hrpn/new-hook-name",
+	"name": "@hrpn/use-states",
 	"version": "1.0.0",
 	"description": "",
 	"main": "dist/index.js",
